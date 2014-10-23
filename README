@@ -1,0 +1,23 @@
+Christopher Costello
+A simple CLI chat program. The chat coordinator runs as a seperate process than the clients and facilitates communication. A seperate chat server process gets forked and execed per chat session.
+
+To compile and run: 
+
+make
+
+./chat_coordinator
+
+./chat_client <coordinator-host> <coordinator-port>
+
+To Clean: 
+
+make clean
+
+
+Current status:
+It all compiles well. 
+Basic functionality is there. Start, Join, submit, getnext work very well.
+Getall works sometimes, there are bugs in there that I couldn't get ironed out. and occasionally the client will hang.
+I didn't have time to implement a timeout or a terminate. So a server will
+exist indefinitely untill killed externally and doesn't communicate with the chat coordinator.
+
